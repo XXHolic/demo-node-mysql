@@ -4,15 +4,12 @@
   "private": true,
   "dependencies": {
     "@koa/cors": "^3.1.0",
-    "http-proxy-middleware": "^1.0.5",
     "koa": "^2.13.0",
-    "koa-bodyparser": "^4.3.0",
-    "koa-router": "^9.4.0",
     "mysql": "^2.18.1"
   },
   "scripts": {
-    "watch": "node script/watch.js",
-    "stop": "node script/stop.js"
+    "start": "webpack serve --open",
+    "server": "node server/server.js"
   },
   "browserslist": {
     "production": [
@@ -28,7 +25,10 @@
   },
   "husky": {},
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.1",
     "webpack": "^5.13.0",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
   }
 }
